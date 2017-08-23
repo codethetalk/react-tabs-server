@@ -1,7 +1,28 @@
 {
+  "name": "hapijs-auth-react-tabs",
+  "version": "0.0.1",
+  "description": "backend for react-tabs",
+  "engines": {
+    "node": "8"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
-    "bcrypt": "^1.0.2",
+    "bcrypt-nodejs": "^0.0.3",
+    "boom": "^5.2.0",
+    "dotenv": "^4.0.0",
+    "glob": "^7.1.2",
     "hapi": "^16.5.2",
-    "hapi-auth-basic": "^4.2.0"
+    "hapi-auth-jwt": "^4.0.0",
+    "joi": "^10.6.0",
+    "joi-objectid": "^2.0.0",
+    "jsonwebtoken": "^7.4.3",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.7",
+    "pg": "^7.2.0",
+    "request": "^2.81.0"
   }
 }
