@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ../.
+      dockerfile: docker/api/Dockerfile.dev
+    image: react-tabs-api
+    environment:
+      - NODE_ENV=development
+      - PORT=8080
+      - MONGODB=mongodb://mongo/reacttabs
+    volumes:
+      - ../:/usr/src/api
+    ports:
+      - '8080:8080'
+    links:
+      - 'mongo'
+  mongo:
+    image: mongo
+    build:
+      context: ../.
+      dockerfile: docker/db/Dockerfile.dev
+    ports:
+      - '27017:27017'
